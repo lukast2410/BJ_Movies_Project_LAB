@@ -110,14 +110,14 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ],
                               image: DecorationImage(
-                                  image: AssetImage(e), fit: BoxFit.fill)),
+                                  image: AssetImage(e), fit: BoxFit.fitHeight)),
                         );
                       });
                     }).toList(),
                     options: CarouselOptions(
                         initialPage: currIdx,
                         autoPlay: true,
-                        height: 400.0,
+                        height: 300.0,
                         enableInfiniteScroll: true,
                         reverse: false,
                         autoPlayInterval: Duration(seconds: 3),
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 600,
+                    height: MediaQuery.of(context).size.height - 200,
                     child: TabBarView(
                       children: [
                         ListView.builder(
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Container(
-                margin: EdgeInsets.only(top: 150),
+                margin: EdgeInsets.only(top: 110),
                 child: Card(
                   elevation: 5,
                   shape: RoundedRectangleBorder(
@@ -207,7 +207,7 @@ class _HomePageState extends State<HomePage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  margin: EdgeInsets.only(top: 150),
+                  margin: EdgeInsets.only(top: 110),
                   child: Card(
                     elevation: 5,
                     shape: RoundedRectangleBorder(
