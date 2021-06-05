@@ -46,4 +46,32 @@ List<Movie> movies = [
     description: "Men in Black (MIB) is a secret agency that polices these aliens, protects Earth from extraterrestrial threats, and uses memory-erasing neuralyzers to keep alien activity a secret.",
     category: "popular"
   ),
+  Movie(
+    imagePath: "assets/movie/alladin.png",
+    title: "Aladdin",
+    genre: "Adventure, Family, Fantasy",
+    description: "Aladdin who regularly steals to get by with the aid of his pet monkey, Abu. One day while roaming the streets, Aladdin spots a beautiful girl who gets in trouble after giving away bread to children without paying.",
+    category: "regular"
+  ),
+  Movie(
+    imagePath: "assets/movie/angelhasfallen.png",
+    title: "Angel Has Fallen",
+    genre: "Action, Thriller",
+    description: "The film starts with Mike Banning (Gerard Butler) undergoing a military training exercise in which he runs through a building while being shot at. He takes out all the targets in his way until he makes it outside the facility and gets shot himself by his teammate Wade Jennings (Danny Huston).",
+    category: "regular"
+  ),
+  Movie(
+    imagePath: "assets/movie/c_marvel.png",
+    title: "Captain Marvel",
+    genre: "Adventure, Sci-Fi, Action",
+    description: "In 1995, on the Kree Empire's capital planet of Hala, warrior and Starforce member Vers suffers from recurring nightmares involving an older woman. Yon-Rogg, her mentor and commander, warns her to control her abilities while the Supreme Intelligence, an organic artificial intelligence who acts as the ruler of the Kree, urges her to keep her emotions in check.",
+    category: "regular"
+  ),
+  Movie(
+    imagePath: "assets/movie/friendzone.png",
+    title: "Frienzone",
+    genre: "Romance",
+    description: "Boyo's life changed dramatically when her boyfriend asked to break up. Also, she became unemployed because of her friend, Stud, who brought strangers to their home. Boyo and Boom decided to kick out Stud and look for a new person to stay with them. Boyo eventually got a recommendation from Amm and Bern, who was Good, a freelance artist.",
+    category: "regular"
+  ),
 ];

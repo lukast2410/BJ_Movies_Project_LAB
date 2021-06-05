@@ -24,17 +24,6 @@ class _HomePageState extends State<HomePage> {
   CarouselController controller = CarouselController();
   final String username;
   int currIdx = 0;
-  var listImage = [
-    'assets/movie/alladin.png',
-    'assets/movie/angelhasfallen.png',
-    'assets/movie/avenger.png',
-    'assets/movie/c_marvel.png',
-    'assets/movie/doraemon.png',
-    'assets/movie/friendzone.png',
-    'assets/movie/mib.png',
-    'assets/movie/parasite.png',
-    'assets/movie/spiderman.png',
-  ];
 
   List<Movie> newMovies =
       movies.where((element) => element.category.contains("new")).toList();
@@ -92,12 +81,14 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   CarouselSlider(
                     carouselController: controller,
-                    items: listImage.map((e) {
+                    items: movies.map((e) {
                       return Builder(builder: (ctx) {
-                        return Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
-                          width: MediaQuery.of(ctx).size.width,
-                          decoration: BoxDecoration(
+                        return GestureDetector(
+                          onTap: () => goToDetail(e),
+                          child: Container(
+                            margin: EdgeInsets.symmetric(vertical: 10),
+                            width: MediaQuery.of(ctx).size.width,
+                            decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
@@ -110,7 +101,10 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ],
                               image: DecorationImage(
-                                  image: AssetImage(e), fit: BoxFit.fitHeight)),
+                                  image: AssetImage(e.imagePath),
+                                  fit: BoxFit.fitHeight),
+                            ),
+                          ),
                         );
                       });
                     }).toList(),
@@ -120,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                         height: 300.0,
                         enableInfiniteScroll: true,
                         reverse: false,
-                        autoPlayInterval: Duration(seconds: 3),
+                        autoPlayInterval: Duration(seconds: 5),
                         autoPlayAnimationDuration: Duration(milliseconds: 900),
                         pauseAutoPlayOnTouch: true,
                         enlargeCenterPage: true,
